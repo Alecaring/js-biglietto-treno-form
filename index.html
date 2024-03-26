@@ -28,27 +28,37 @@
         <main>
 
 
-            <h2 class="text-center">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
-            <div class="ms_container">
+            <h2 class="text-center pb-3">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+            <div class="ms_container rounded">
                 
-                <div class="ms_internal_container">
-                    <label for="username">Nome Cognome</label>
-                    <input type="text" id="username">
-    
-                    <label for="km">km da percorrere</label>
-                    <input type="number" id="km">
-    
-                    <label for="eta"></label>
-                    <select name="eta" id="eta">
-                        <option value="minorenne">Minorenne</option>
-                        <option value="maggiorenne">Maggiorenne</option>
-                        <option value="over65">Over 65</option>
-                    </select>
+                <div class="ms_internal_container mt-4">
+
+                    <div class="d-flex flex-column m-5">
+                        <label for="username">Nome Cognome</label>
+                        <input class="ms_input px-3" type="text" id="username" placeholder="Alessio Caringella">
+                    </div>
+                    
+                    
+                    <div class="d-flex flex-column m-5">
+                        <label for="km">km da percorrere</label>
+                        <input class="ms_input px-3" type="number" id="km" placeholder="50">
+                    </div>
+                    
+
+                    <div class="d-flex flex-column m-5">
+                        <label for="eta">Inserisci la tua categoria</label>
+                        <select class="ms_input px-3" name="eta" id="eta">
+                            <option value="minorenne">Minorenne</option>
+                            <option value="maggiorenne">Maggiorenne</option>
+                            <option value="over65">Over 65</option>
+                        </select>
+                    </div>
+                    
                 </div>
                 
-                <div>
-                    <button id="send-btn">Genera</button>
-                    <button>Annulla</button>
+                <div class="d-flex justify-content-center m-5">
+                    <button class="mx-5 py-2" id="send-btn">Genera</button>
+                    <button class="mx-5 py-2 b ms_btn_delect">Annulla</button>
                 </div>
                 
 
@@ -57,22 +67,32 @@
             </div>
 
             <h2 class="text-center p-4">IL TUO BIGLIETTO</h2>
-            <div class="ms_container">
+            <div class="ms_container d-flex justify-content-center align-items-center rounded">
 
-                <h1>Nome Passeggero</h1>
-                <p id="usernameDisplay"></p>
 
-                <h1>offerta</h1>
-                <p id="offertaBiglietto"></p>
+                <table class="table table-borderless border-top border-bottom mx-5">
+                    <thead>
+                      <tr>
+                        <th scope="col" class="py-5">Nome Passeggero</th>
+                        <th scope="col" class="py-5">offerta</th>
+                        <th scope="col" class="py-5">Carrozza</th>
+                        <th scope="col" class="py-5">Codice CP</th>
+                        <th scope="col" class="py-5">Costo Biglietto</th>
 
-                <h1>Carrozza</h1>
-                <p id="carrozza"></p>
-
-                <h1>Codice CP</h1>
-                <p id="codeInternal"></p>
-
-                <h1>Costo Biglietto</h1>
-                <p id="prezzo"></p>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th class="pb-5" scope="row" id="usernameDisplay">-</th>
+                        <td class="pb-5" id="offertaBiglietto">-</td>
+                        <td class="pb-5" id="carrozza">-</td>
+                        <td class="pb-5" id="codeInternal">-</td>
+                        <td class="pb-5" id="prezzo">-</td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                
 
             </div>
 

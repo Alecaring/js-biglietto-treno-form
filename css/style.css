@@ -17,6 +17,9 @@ main h2 {
     color: white;
 }
 .ms_container {
+    
+    
+    
     height: 35vh;
     width: 80vw;
     background-color: white;
@@ -25,5 +28,25 @@ main h2 {
 .ms_internal_container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+}
+.ms_input {
+    width: 250px;
+    height: 50px;
+}
+#send-btn {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(167, 29, 80);
+    color: white;
+    border: none;
+    font-weight: bold;
+
+}
+.ms_btn_delect {
+    width: 100px;
+    height: 50px;
+    background-color: white;
+    border: 3px solid rgb(167, 29, 80);
+    font-weight: bold;
 }
